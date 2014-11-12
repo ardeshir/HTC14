@@ -1,0 +1,351 @@
+/* ---------------------------------------------------------
+	LAYOUT: HOME PAGE
+--------------------------------------------------------- */
+
+// HTC Alert
+// --------------------------------------------------
+
+.htc-alert {
+  position: absolute;
+  top: 123px;
+  width: 100%;
+  z-index: 2;
+  @include clearfix;
+
+  @media (max-width: $screen-xs-max) {
+    position: relative;
+    top: 0;
+    background: $brand-primary;
+  }
+
+  .alert {
+    margin: 0;
+  }
+
+  .close {
+    @media (max-width: $screen-xs-max) {
+      margin-top: -5px;
+      padding: 0 0 0 15px;
+      font-size: 35px;
+    }
+  }
+
+}
+
+
+// Home Feature
+// --------------------------------------------------
+
+.home-feature-background {
+	position: relative;
+	width: 100%;
+	height: 100%;
+  margin: -120px 0 100px;
+	
+	background-repeat: no-repeat;
+	background-position: center 120px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 125px;
+    right: 0;
+    width: 99px;
+    height: 420px;
+    max-height: 50%;
+    background: url(../img/home-feature-shape.png) no-repeat top right;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    height: 294px;
+    background-position: center 80px;
+
+    .lt-ie9 & {
+      margin-bottom: 50px;
+    }
+  } // mq
+} // home-feature-background
+
+.home-feature-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(10deg,  rgba(0,0,0,0.57) 14%, rgba(0,0,0,0.42) 30%, rgba(0,0,0,0) 55%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(14%,rgba(0,0,0,0.57)), color-stop(30%,rgba(0,0,0,0.42)), color-stop(55%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(10deg,  rgba(0,0,0,0.57) 14%,rgba(0,0,0,0.42) 30%,rgba(0,0,0,0) 55%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(10deg,  rgba(0,0,0,0.57) 14%,rgba(0,0,0,0.42) 30%,rgba(0,0,0,0) 55%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(10deg,  rgba(0,0,0,0.57) 14%,rgba(0,0,0,0.42) 30%,rgba(0,0,0,0) 55%); /* IE10+ */
+	background: linear-gradient(10deg,  rgba(0,0,0,0.57) 14%,rgba(0,0,0,0.42) 30%,rgba(0,0,0,0) 55%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	z-index: 2;
+
+  .lt-ie9 & {
+    display: none;
+  }
+}
+
+.home-feature {
+	position: absolute;
+  bottom: 106px;
+	left: 0;
+  width: 100%;
+  margin-bottom: 50px;
+  z-index: 3;
+
+  @media (max-width: $screen-xs-max) {
+    bottom: 0;
+    margin: 0;
+  }
+  @media (min-width: $screen-sm-min) and (max-height: 670px) {
+    bottom: 50px;
+  }
+}
+
+.home-feature-headline {
+  position: relative;
+  left: -11px;
+  font-weight: bold;
+  font-size: 150px;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: .5px;
+
+  .text {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .shadow {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    color: rgba(255,255,255,.3);
+    -webkit-text-stroke: 1px rgba(255,255,255,.5);
+    z-index: 1;
+
+    .lt-ie9 & {
+      display: none;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    top: 20px;
+    left: -5px;
+    font-size: 85px;
+  }
+  @media (min-width: $screen-sm-min) and (max-height: 600px) {
+    left: 0;
+    font-size: 75px;
+  }
+}
+
+.home-feature-slider {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .lt-ie9 & {
+    padding: 0 5px;
+    background: $gray;
+  }
+  
+  li {
+    height: 45px;
+    color: $gray-light;
+
+    .lt-ie9 & {
+      display: none;
+    }
+
+    .slide-title {
+      display: inline-block;
+      width: 255px;
+      font-weight: normal;
+      font-size: 35px;
+      text-transform: uppercase;
+      vertical-align: top;
+    }
+
+    .slide-content {
+      display: inline-block;
+      width: 53%;
+      padding-top: 5px;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 1.4;
+      opacity: 0;
+    }
+
+    &.active {
+      color: #fff;
+
+      .lt-ie9 & {
+        display: block;
+        height: 125px;
+      }
+
+      .slide-title {
+        font-weight: bold;
+        transition: all 200ms ease-in-out;
+      }
+
+      .slide-content {
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+      }
+    } // first-child
+
+    @media (max-width: $screen-xs-max) {
+      &.active {
+        color: $gray;
+      }
+
+      .slide-content {
+        display: none !important;
+      }
+    } //mq
+  } // li
+} // home-feature-slider
+
+// control the height of the bx slider plugin display window to show upcoming slides
+.home-feature {
+  .container {
+    position: relative;
+  }
+
+  .bx-viewport {
+    height: 130px !important;
+
+    @media (max-width: $screen-xs-max) {
+      height: 40px !important;
+    }
+
+    .lt-ie9 & {
+      height: 60px !important;
+    }
+  }
+
+  .bx-wrapper {
+    @media (max-width: $screen-xs-max) {
+      max-width: none !important;
+      margin: 0 -20px 0 -20px !important;
+      padding: 6px 20px 0;
+      background: #fff;
+
+      .lt-ie9 & {
+        display: none;
+      }
+    }
+  }
+}
+
+.home-feature-btn {
+  display: inline-block;
+  position: absolute;
+  bottom: 6px;
+  left: 280px;
+  margin-top: 19px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    bottom: -20px;
+  }
+  @media (max-width: $screen-xs-max) {
+    position: absolute;
+    bottom: auto;
+    top: 121px;
+    left: 20px;
+  }
+
+  .lt-ie9 & {
+    position: static;
+  }
+}
+
+
+// Programs and Success Stories
+// --------------------------------------------------
+
+.programs-and-success {
+  margin-bottom: 100px;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 10px;
+  }
+}
+
+.home-programs {
+
+  h1 {
+    margin: -11px 0 26px;
+    color: #000;
+    line-height: 1.6;
+
+    a {
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    } //a 
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 25px;
+      line-height: 30px;
+    } //mq
+  } // h1
+
+} // home-programs
+
+.home-program-list {
+  list-style: none;
+  margin: 29px 0 35px;
+  padding: 0;
+
+  li {
+    margin-bottom: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+} // home-program-list
+
+// NOTE: See "Success Story" module for this layout
+
+
+// News & Calendar Section
+// --------------------------------------------------
+
+.news-and-calendar {
+  margin-bottom: 100px;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 10px;
+
+    .col-xs-12:first-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 36px;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 22px;
+    }
+  }
+} // news-and-calendar
+
+// NOTE: See "Media Block" & "Calendar List" modules for this sections's layouts

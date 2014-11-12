@@ -1,0 +1,36 @@
+/* ---------------------------------------------------------
+	MODULE: CONTENT FOOTER
+--------------------------------------------------------- */
+
+.content-footer {
+	margin-top: 53px;
+	font-weight: 200;
+	font-size: 16px;
+
+	@media (max-width: $screen-xs-max) {
+		margin-top: 38px;
+		}
+
+	.arrow-link {
+		display: block;
+		font-weight: 200 !important;
+	}
+
+	.col-xs-12:last-child {
+		.content-footer-content {
+			@media (max-width: $screen-xs-max) {
+				padding-bottom: 12px;
+				border-bottom: 3px solid #dfdfdf;
+			}
+		}
+	}
+}
+
+.content-footer-content {
+	padding-top: 15px;
+	border-top: 3px solid #dfdfdf;
+
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 12px;
+	}
+}

@@ -1,0 +1,241 @@
+/* ---------------------------------------------------------
+	FOOTER
+--------------------------------------------------------- */
+
+footer {
+  position: relative;
+  font-size: 14px;
+  color: $gray-light;
+  z-index: 2;
+
+  &.home {
+    padding-top: 52px;
+  }
+
+  a {
+    color: $gray-light;
+    text-decoration: underline;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.footer-level-1 {
+	height: 51px;
+  font-weight: bold;
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: .5px;
+	background: $gray;
+	border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+
+  @media (max-width: $screen-sm-max) {
+    height: auto;
+    font-size: 16px;
+  }
+
+  footer.home & {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+    border-bottom: none;
+    z-index: 4;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.176);
+    -webkit-transition: box-shadow 100ms ease-in-out;
+    transition: box-shadow 100ms ease-in-out;
+
+    &.footer-unfix {
+      position: absolute;
+      top: 0;
+      height: 52px;
+      border-bottom: 1px solid #fff;
+      box-shadow: none;
+    }
+
+    // set footer to be static on android devices because of known link bug
+    .android &, {
+      position: static;
+      margin-top: -52px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  .fl1-headline {
+    display: inline-block;
+    float: left;
+    padding-top: 14px;
+
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+  }
+
+  .fl1-cta {
+    float: right;
+    
+    @media (max-width: $screen-xs-max) {
+      float: none;
+    }
+  }
+
+	.fl1-btn {
+    float: left;
+    display: inline-block;
+    height: 50px;
+    padding: 15px 24px 0 25px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: url('../img/backer-fl1-btn.png') no-repeat bottom left;
+    border-right: 1px solid #fff;
+
+    &:first-child {
+      border-left: 1px solid #fff;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background: darken($gray, 10%);
+
+      @media (max-width: $screen-sm-max) {
+        color: $gray-light;
+        background: none;
+      } // mq
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 17px 8px 0 12px;
+      font-size: 13px;
+    }
+	} // .fl1-btn
+} // .footer-level-1
+
+.footer-level-2 {
+  padding: 50px 0 35px;
+  background: $gray url(../img/footer-shape.png) no-repeat bottom left;
+
+  @media (max-width: $screen-xs-max) {
+    padding: 30px 0 25px;
+    background-image: none;
+  }
+
+  .btn {
+    margin-right: 6px;
+    margin-bottom: 15px;
+  }
+
+  .campus-links {
+    padding-top: 21px;
+
+    .uppercase {
+      font-weight: 200;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-top: 12px;
+    }
+  } // campus-links
+
+  .social-icons {
+    margin-top: -3px;
+    font-size: 41px;
+    color: $gray-light;
+    text-align: right;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 37px;
+      text-align: left;
+      padding-top: 27px;
+    }
+
+    span {
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+      }
+    } // span
+  } // social-icons
+
+  .mnscu {
+    padding-top: 18px;
+
+    @media (max-width: $screen-xs-max) {
+      padding-top: 23px;
+    }
+
+    img {
+      float: left;
+      position: relative;
+      top: -10px;
+      margin-right: 14px;
+      vertical-align: middle;
+
+      @media (max-width: $screen-xs-max) {
+        width: 50px;
+        height: auto;
+      }
+    }
+  } // mnscu
+} // footer-level-2
+
+
+.footer-level-3 {
+  padding: 18px 0 19px;
+  background: #000;
+  border-bottom: 1px solid #fff;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 9px;
+
+      &:after {
+        content: '';
+        height: 12px;
+        padding-left: 11px;
+        border-right: 1px solid $gray-light;
+
+        @media (max-width: $screen-xs-max) {
+          display: none;
+        }
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        display: block;
+      }
+    } // li
+  } // ul
+
+  .row div:last-child {
+    text-align: right;
+
+    @media (max-width: $screen-xs-max) {
+      text-align: left;
+    }
+  }
+} // footer-level-3
+
+.footer-level-4 {
+  padding: 15px 0 17px;
+  border-top: 10px solid $brand-primary;
+
+  a:hover {
+    color: $gray;
+  }
+} // footer-level-4

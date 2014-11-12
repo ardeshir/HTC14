@@ -1,0 +1,155 @@
+/* ---------------------------------------------------------
+  FONTS
+--------------------------------------------------------- */
+
+/* Din Light */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWebPro-Light.eot');
+    src: url('../fonts/DINWebPro-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWebPro-Light.woff') format('woff'),
+         url('../fonts/DINWebPro-Light.ttf') format('truetype'),
+         url('../fonts/DINWebPro-Light.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+/* Din Regular */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWebPro.eot');
+    src: url('../fonts/DINWebPro.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWebPro.woff') format('woff'),
+         url('../fonts/DINWebPro.ttf') format('truetype'),
+         url('../fonts/DINWebPro.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Din Regular Italic */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWeb-Ita.eot');
+    src: url('../fonts/DINWeb-Ita.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWeb-Ita.woff') format('woff'),
+         url('../fonts/DINWeb-Ita.ttf') format('truetype'),
+         url('../fonts/DINWeb-Ita.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Din Medium */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWeb-Medium.eot');
+    src: url('../fonts/DINWeb-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWeb-Medium.woff') format('woff'),
+         url('../fonts/DINWeb-Medium.ttf') format('truetype'),
+         url('../fonts/DINWeb-Medium.svg') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Din Medium Italic */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWeb-MediumIta.eot');
+    src: url('../fonts/DINWeb-MediumIta.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWeb-MediumIta.woff') format('woff'),
+         url('../fonts/DINWeb-MediumIta.ttf') format('truetype'),
+         url('../fonts/DINWeb-MediumIta.svg') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Din Bold */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWebPro-Bold.eot');
+    src: url('../fonts/DINWebPro-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWebPro-Bold.woff') format('woff'),
+         url('../fonts/DINWebPro-Bold.ttf') format('truetype'),
+         url('../fonts/DINWebPro-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Din Bold Italic */
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/DINWeb-BoldIta.eot');
+    src: url('../fonts/DINWeb-BoldIta.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINWeb-BoldIta.woff') format('woff'),
+         url('../fonts/DINWeb-BoldIta.ttf') format('truetype'),
+         url('../fonts/DINWeb-BoldIta.svg') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* HTC Icon Font */
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?-qfha2c');
+  src:url('../fonts/icomoon.eot?#iefix-qfha2c') format('embedded-opentype'),
+    url('../fonts/icomoon.woff?-qfha2c') format('woff'),
+    url('../fonts/icomoon.ttf?-qfha2c') format('truetype'),
+    url('../fonts/icomoon.svg?-qfha2c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon-font() {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e602";
+}
+.icon-youtube:before {
+  content: "\e603";
+}
+.icon-flickr:before {
+  content: "\e604";
+}
+.icon-gplus:before {
+  content: "\e605";
+}
+.icon-linkedin:before {
+  content: "\e606";
+}
+.icon-facebook:before {
+  content: "\e607";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-cancel-circled:before {
+  content: "\e600";
+}
+.icon-alert:before {
+  content: "\e601";
+}

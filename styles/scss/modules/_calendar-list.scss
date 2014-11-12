@@ -1,0 +1,154 @@
+/* ---------------------------------------------------------
+	MODULE: CALENDAR LIST
+--------------------------------------------------------- */
+
+.calendar-list-module {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 21px;
+		height: 100%;
+		border-right: 1px solid $gray-light;
+		z-index: -1;
+
+		@media (max-width: $screen-xs-max) {
+			display: none;
+		}
+
+		.lt-ie9 & {
+			display: none;
+		}
+	}
+
+	.calendar-event {
+		position: relative;
+		min-height: 52px;
+		margin-bottom: 40px;
+		padding-left: 100px;
+
+		&:last-child {
+			background: #fff;
+		}
+
+		@media (max-width: $screen-xs-max) {
+			min-height: 0;
+			margin-bottom: 32px;
+			padding-left: 0;
+		}
+	}
+
+	.calendar-list-date {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 81px;
+		height: 52px;
+		border: 1px solid $gray-light;
+
+		@media (max-width: $screen-xs-max) {
+			display: inline-block;
+			position: static;
+			width: auto;
+			height: auto;
+			margin-bottom: 2px;
+		}
+
+		.month {
+			display: inline-block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 50px;
+			padding-top: 1px;
+			font-weight: bold;
+			font-size: 14px;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			background: $gray-light;
+			-moz-transform: rotate(-90deg);
+			-webkit-transform: rotate(-90deg);
+			-o-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			-ms-transform-origin: left top;
+			-webkit-transform-origin: left top;
+			transform-origin: left top;
+
+			@media (max-width: $screen-xs-max) {
+				position: static;
+				width: auto;
+				padding: 2px 12px 0;
+				line-height: 1.5;
+				vertical-align: top;
+				-moz-transform: none;
+				-webkit-transform: none;
+				-o-transform: none;
+				-ms-transform: none;
+				transform: none;
+			}
+		}
+
+		.day {
+			display: inline-block;
+			width: 58px;
+			margin-left: 20px;
+			padding-top: 6px;
+			font-size: 30px;
+			text-align: center;
+
+			@media (max-width: $screen-xs-max) {
+				position: static;
+				width: 30px;
+				margin-left: 0;
+				padding: 2px 4px 0 0;
+				font-size: 14px;
+				-moz-transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+
+			.lt-ie9 & {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.calendar-list-title {
+		margin-bottom: 3px;
+		line-height: 1.4;
+
+		@media (max-width: $screen-xs-max) {
+			margin-top: 9px;
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.arrow-link {
+			position: relative;
+			padding-left: 5px;
+			font-size: 14px;
+			color: $brand-primary;
+
+			&:hover {
+				color: $link-hover-color;
+			}
+		} // arow-link
+	} // calendar-list-title
+
+	.separator {
+		padding: 0 4px;
+	}
+
+} // .calendar-excerpt

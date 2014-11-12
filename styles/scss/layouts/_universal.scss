@@ -1,0 +1,43 @@
+/* ---------------------------------------------------------
+	LAYOUT: UNIVERSAL
+--------------------------------------------------------- */
+
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+// pad the body down to accomdate the HTC and main header's absolute position
+body {
+   margin-top: 120px;
+
+   @media (max-width: $screen-xs-max) {
+      margin-top: 89px;
+   }
+}
+
+// control opacity and color of placeholder text
+::-webkit-input-placeholder {
+   opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+   opacity: 1;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   opacity: 1;
+}
+:-ms-input-placeholder {  
+   opacity: 1; 
+}
+
+
+// Additiona helper classes
+
+.uppercase {
+   text-transform: uppercase;
+}
+
+// disable hover events if needed
+.disable-hover {
+  pointer-events: none;
+}

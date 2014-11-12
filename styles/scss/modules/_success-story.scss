@@ -1,0 +1,46 @@
+/* ---------------------------------------------------------
+    MODULE: SUCCESS STORY
+--------------------------------------------------------- */
+
+.success-story-module {
+
+  .success-photo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 13px;
+  }
+
+  .success-header {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-light;
+
+    h2 {
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 14px;
+      color: $gray-light;
+      text-transform: uppercase;
+    }
+  }
+
+  .success-logo {
+    float: right;
+    margin-top: 3px;
+
+    @media (max-width: $screen-xs-max) {
+      float: none;
+      margin: 10px 0 2px;
+    }
+  }
+
+  .success-excerpt {
+    margin-bottom: 33px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+} // success-story-module

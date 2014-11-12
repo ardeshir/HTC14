@@ -1,0 +1,448 @@
+/* ---------------------------------------------------------
+	MY HTC NAVIGATION
+--------------------------------------------------------- */
+
+.my-htc-navigation {
+	position: absolute;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0;
+  z-index: 4;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 57px;
+  }
+
+  .my-htc-toggle {
+    margin-left: 10px;
+  }
+
+  .container,
+  .container-fluid {
+    > .navbar-header,
+    > .navbar-collapse {
+      margin-right: -10px;
+      margin-left:  -10px;
+    }
+  }
+}
+
+/* ---------------------------------------------------------
+	HEADER
+--------------------------------------------------------- */
+
+.header {
+	position: absolute;
+	top: 32px;
+	left: 0;
+	width: 100%;
+  height: 91px;
+	-webkit-transition: box-shadow 100ms ease-in-out;
+	transition: box-shadow 100ms ease-in-out;
+  z-index: 3;
+
+   @media (max-width: $screen-xs-max) {
+    height: 57px;
+  }
+
+	&.header-fix {
+		position: fixed;
+		top: 0;
+		left: 0;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+
+    .search-bar-cover {
+      border-bottom: none;
+
+      .lt-ie9 & {
+        border-bottom: 1px solid #dfdfdf;
+      }
+    } // .search-bar-cover
+	} // &.header-fix
+
+  // set header to be absolute on android devices because of known link bug
+  .android & {
+    position: absolute;
+    top: 32px;
+    left: 0;
+  }
+
+ 
+} // .header
+
+.header-logo {
+  img {
+    @media (max-width: $screen-sm-max) {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      max-width: 350px;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-top: 3px;
+      max-width: 210px;
+    }
+  }
+}
+
+.search-and-nav {
+	margin-top: 8px;
+	font-weight: bold;
+	font-size: 18px;
+	color: $gray-light;
+	text-align: right;
+	text-transform: uppercase;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 0;
+  }
+}
+
+.header-search-form {
+  display: none;
+  position: relative;
+  top: -2px;
+  margin-right: 20px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 27px;
+    border-right: 1px solid $gray-light;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    display: none !important;
+  }
+
+  &.active {
+    display: inline-block;
+  }
+}
+
+.search-form-input {
+  display: inline-block;
+  width: 220px;
+  height: 27px;
+  margin-right: 25px;
+  padding: 3px 35px 0 7px;
+  font-weight: 200;
+  font-size: 16px;
+  color: $gray-light;
+  line-height: 22px;
+  border: 1px solid $gray-lighter;
+
+  @media (max-width: $screen-sm-max) {
+    width: 175px;
+  }
+}
+
+.search-form-submit {
+  position: absolute;
+  top: 3px;
+  right: 28px;
+  background: none;
+  border: none;
+}
+
+.header-search {
+	display: inline-block;
+	position: relative;
+	top: 0;
+	margin-right: 20px;
+	padding: 0 25px 0 41px;
+	cursor: pointer;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: -4px;
+		right: 0;
+		height: 27px;
+		border-right: 1px solid $gray-light;
+	}
+
+	.glyphicon-search {
+		position: absolute;
+    top: -3px;
+    left: 0;
+		margin-right: 10px;
+		font-size: 27px;
+	}
+
+  /* change out the magnifier icon for a close icon */
+  &.active {
+
+    .glyphicon-search {
+      display: none;
+    }
+
+    &:before {
+      content: "\e600";
+      position: absolute;
+      top: -6px;
+      left: -4px;
+      font-size: 31px;
+      @include icon-font();
+      line-height: 1.025;
+      color: #000;
+    }
+  } // active
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+
+} // header-search
+
+.primary-navigation {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+	}
+
+	.icon-bar-wrap {
+		display: inline-block;
+		width: 33px;
+		height: 33px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+
+	.icon-bar {
+		display: block;
+		width: 100%;
+		height: 5px;
+		margin-bottom: 6px;
+		background: $brand-primary;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+	}
+
+  .dropdown-toggle {
+    display: block;
+  }
+
+	.dropdown-toggle:hover, .dropdown-toggle:focus {
+		.icon-bar {
+			background: $link-hover-color;
+		}
+	}
+
+	.primary-nav-title {
+		display: inline-block;
+
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+	}
+
+	 /* primary nav dropdown styles */
+	.dropdown-menu {
+		margin-top: 25px;
+		padding: 20px 0;
+		font-size: 30px;
+		color: #fff;
+		text-transform: capitalize;
+		background-color: #f26522;
+		background-color: rgba(242,101,34,.9);
+		border-top: 3px solid #000;
+
+    @media (max-width: $screen-xs-max) {
+      width: 285px;
+      margin-top: 9px;
+      padding: 0 0 10px;
+      font-size: 23px;
+    }
+
+		// Links within the dropdown menu
+		> li > a {
+			padding: 13px 36px 7px;
+
+      @media (max-width: $screen-xs-max) {
+        padding: 13px 26px 7px;
+      }
+		}
+
+    // xs-only elements
+    @media (max-width: $screen-xs-max) {
+      .primary-nav-search {
+        position: relative;
+        margin-bottom: 6px;
+        padding: 0 26px;
+        background-color: darken(#f26522, 10%);
+      }
+
+      .search-bar-input {
+        height: 50px;
+        padding: 6px 45px 0 0;
+        width: 100%;
+        margin: 0;
+        font-size: 23px;   
+      } // search-bar-input
+
+      .search-bar-submit {
+        float: none;
+        position: absolute;
+        top: 11px;
+        right: 26px;
+        width: 28px;
+        height: 28px;
+        margin-top: 0;
+        padding: 0 0 0 2px;
+        font-size: 22px;
+      } // search-bar-submit
+    }// mq
+	} // dropdown-menu
+
+	.dropdown-menu > li > a {
+	  &:hover,
+	  &:focus {
+	    background-color: darken(#f26522, 10%);
+	  }
+	}
+
+	/* change out the pancake menu for a close icon */
+	.open {
+	  // Show the menu
+	  .icon-bar {
+	    display: none;
+	  }
+
+	  .icon-bar-wrap:after {
+			content: "\e600";
+      position: relative;
+      top: -2px;
+      font-size: 31px;
+      @include icon-font();
+      line-height: 1.025;
+      color: #000;
+		}
+	} // open
+
+} // primary-navigation 
+
+
+/* ---------------------------------------------------------
+  SEARCH BAR
+--------------------------------------------------------- */
+
+.search-bar-position {
+  position: relative;
+}
+
+.search-bar-cover {
+  position: relative;
+  padding: 25px 0 21px;
+  background: #fff;
+  border-bottom: 1px solid #dfdfdf;
+  z-index: 2;
+
+  .home & {
+    border-bottom: none;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding: 15px 0 9px;
+  }
+}
+
+.search-bar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 83px;
+  margin-top: -86px;
+  background-color: #f26522;
+  background-color: rgba(242,101,34,.9);
+  border-top: 3px solid #000;
+  z-index: 1;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+
+  &.active {
+    margin-top: 0;
+  }
+
+  p { 
+    position: relative; 
+    float: left;
+    margin: 0;
+
+    label { 
+      position: absolute; 
+      top: 20px; 
+      left: 1px;
+      font-weight: normal;
+      font-family: 'Din', Arial;
+      font-size: 30px;
+      color: #fff;
+      z-index: 1;
+    }
+  }
+
+} // search-bar
+
+.search-bar-input {
+  height: 70px;
+  padding-top: 6px;
+  width: 80%;
+  margin-top: 5px;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  .lt-ie9 & {
+    line-height: 2;
+  }
+} // search-bar-input
+
+.search-bar-input::-webkit-input-placeholder {
+   color: #fff;
+}
+.search-bar-input:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+.search-bar-input::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;
+}
+.search-bar-input:-ms-input-placeholder {  
+   color: #fff;
+}
+
+.search-bar-submit {
+  float: right;
+  width: 35px;
+  height: 35px;
+  margin-top: 22px;
+  padding: 0 0 0 3px;
+  font-size: 25px;
+  color: #fff;
+  line-height: .9;
+  background-color: $link-color;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+
+  &:before {
+    position: relative;
+    top: -1px;
+  }
+
+  &:hover {
+    background-color: $link-hover-color;
+  }
+} // search-bar-submit

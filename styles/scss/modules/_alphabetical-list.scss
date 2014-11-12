@@ -1,0 +1,196 @@
+/* ---------------------------------------------------------
+	MODULE: ALPHABETICAL LIST
+--------------------------------------------------------- */
+
+// Wrapper for alpha nav and aplha list
+.alphbetical-list {
+	position: relative;
+	margin-top: 39px;
+
+	&.with-alpha-nav {
+		padding-top: 70px;
+
+		@media (max-width: $screen-sm-max) {
+			padding-top: 0;
+		}
+	}
+
+} // .alpha-navigation
+
+
+// anchor link navigation for alphabetical list
+.alpha-nav {
+	background: none;
+
+	@media (max-width: $screen-md) {
+		display: none;
+	}
+
+
+	&.navbar-default .navbar-nav {
+		width: 100%;
+		margin-bottom: 0;
+
+		@media (max-width: $screen-sm-max) {
+			width: auto;
+		}
+	}
+
+	// Style individual alpha list links
+	&.navbar-default .navbar-nav > li > a {
+		border: none;
+		height: 34px;
+		padding: 10px 11px 0;
+		font-size: 16px;
+		line-height: 1;
+		color: $brand-primary;
+
+        &:hover {
+            color: #fff;
+            background-color: $brand-primary;
+        }
+
+        &:focus {
+            color: inherit;
+            background-color: inherit;
+        }
+	}
+
+	&.navbar-default .navbar-nav > li > a.active {
+		color: #fff;
+		background: $brand-primary;
+	}
+
+	// top of page alpha list link
+	&.navbar-default .navbar-nav > li.top-link {
+		float: right;
+
+		@media (max-width: $screen-sm-max) {
+			float: none;
+		}
+
+		& > a {
+			position: relative;
+			height: 34px;
+			width: 34px;
+			color: #fff;
+			background: $gray-light url(../img/arrow-up.png) no-repeat 11px 13px;
+
+			@media (max-width: $screen-sm-max) {
+				width: 100%;
+			}
+		}
+	}
+
+	&.navbar-default .navbar-nav > li.top-link > a:hover {
+		background-color: $brand-primary;
+	}
+
+	.navbar-collapse {
+		padding: 0 0 0 9px;
+
+		@media (max-width: $screen-sm-max) {
+			padding: 0 20px;
+		}
+	}
+}
+
+// Set alpha nav background-color
+.alpha-nav-container {
+	background-color: $gray-x-light;
+	-webkit-transition: box-shadow 100ms ease-in-out;
+	transition: box-shadow 100ms ease-in-out;
+}
+
+//Bootstrap affix js styles (These are the fixed position styles for the alpha nav)
+
+// Bootstrap affix js: initial state
+.alpha-nav.affix-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	@media (max-width: $screen-sm-max) {
+		position: static;
+	}
+}
+
+// Bootstrap affix js: active state
+.alpha-nav.affix {
+	left: 0;
+	top: 120px;
+	width: 100%;
+
+	@media (max-width: $screen-sm-max) {
+		position: static;
+	}
+
+	.alpha-nav-container {
+		width: 940px;
+		margin: 0 auto;
+		box-shadow: 0 3px 7px rgba(0, 0, 0, 0.13);
+
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+		}
+
+		@media (min-width: $screen-lg) {
+			width: 1140px;
+		}
+	}
+}
+
+
+// Alphabetical list styles
+.alpha-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		margin-bottom: 17px;
+		padding-left: 20px;
+		border-bottom: 1px solid $gray-light;
+	}
+
+	h2 {
+		margin: 0 0 6px;
+		font-size: 22px;
+		color: #f26522;
+	}
+}
+
+.alpha-sub-list {
+	list-style: none;
+	margin: 0 0 32px;
+	padding: 0;
+	font-size: 16px;
+	color: #000;
+
+	li {
+		margin-bottom: 9px;
+	}
+
+	a {
+		color: #000;
+	}
+
+	a:hover {
+		color: #d44d0d;
+		text-decoration: none;
+	}
+}
+
+
+// Shift anchor tags to account for fixed header
+.anchor-shift {
+	display: block;
+	position: relative;
+	top: -200px;
+	height: 0;
+	width:0;
+
+	@media (max-width: $screen-sm-max) {
+		top: -120px;
+	}
+}

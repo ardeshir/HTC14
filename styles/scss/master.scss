@@ -1,0 +1,43 @@
+/* --------------------------------------------------------
+   Hennepin Technical College
+   Styles Version: 1.0
+   Author: Olive & Company | http://oliveandcompany.com
+-------------------------------------------------------- */
+             
+// Styles Index  
+// ------------------------------------------------------
+
+// 1. Bootstrap Theme
+// 2. Layouts  
+// 3. Modules 
+
+// ------------------------------------------------------
+
+// 1. Bootstrap Theme
+// --------------------------------------------------
+@import "bootstrap-theme/_fonts";
+@import "bootstrap-theme/_bootstrap-theme-styles";
+
+// 2. Layouts
+// --------------------------------------------------
+@import "layouts/_universal";
+@import "layouts/_header";
+@import "layouts/_footer";
+@import "layouts/_home";
+@import "layouts/_inside";
+
+// 3. Modules
+// --------------------------------------------------
+@import "modules/_accordion";
+@import "modules/_alphabetical-list";
+@import "modules/_buttons";
+@import "modules/_calendar-list";
+@import "modules/_excerpt-blocks";
+@import "modules/_content-footer";
+@import "modules/_data-point-slider";
+@import "modules/_inside-banner";
+@import "modules/_program-overview";
+@import "modules/_course-overview";
+@import "modules/_credit-lists";
+@import "modules/_program-slider";
+@import "modules/_success-story";

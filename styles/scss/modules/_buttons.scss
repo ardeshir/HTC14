@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------
+  MODULES: BUTTONS & LINKS
+--------------------------------------------------------- */
+
+.btn, .arrow-link {
+  font-weight: bold !important;
+  text-transform: uppercase;
+
+  &:hover, &:active, &:focus {
+    text-decoration: none;
+  }
+
+  &:after {
+    @include icon-font();
+    content: "\f105";
+    position: relative;
+    top: 2px;
+    left: 2px;
+    padding: 0 0 0 6px;
+    font-size: 1.2em !important;
+    line-height: 0 !important;
+  }
+}
+
+.btn {
+  &:after {
+    line-height: 1 !important;
+  }
+}

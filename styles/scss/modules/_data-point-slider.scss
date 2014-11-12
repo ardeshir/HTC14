@@ -1,0 +1,196 @@
+/* ---------------------------------------------------------
+	MODULE: DATA POINT SLIDER
+--------------------------------------------------------- */
+
+.data-point-slider-wrap {
+  position: relative;
+  margin-bottom: 72px;
+  background: url(../img/backer-home-data.png) repeat-x;
+  border-bottom: 10px solid $gray;
+  z-index: 1;
+
+  .bx-wrapper {
+    float: left;
+    width: 33.333%;
+    border-right: 2px solid $gray-lighter;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  // show only the first slode at the smallest breakpoint
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 32px;
+
+    .bx-wrapper {
+      display: none;
+
+      &:first-child {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 220px !important;
+        margin: 0 auto;
+      }
+    } // bx-wrapper
+  } //mq
+} // data-point-slides
+
+.data-point-slider {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    height: 506px;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    @media (max-width: $screen-xs-max) {
+      height: 350px;
+    }
+
+    // control the styling of the current slides
+    &.active {
+      .dps-number {
+        opacity: 1;
+        transition: all 750ms ease-in-out;
+      }
+
+      .dps-line {
+        margin-left: 0;
+        transition: all 750ms ease-in-out;
+      }
+
+      .dps-text {
+        opacity: 1;
+        transition: all 750ms ease-in-out;
+      }
+    } // active
+
+    &:hover {
+      // show detail overlay on hover
+      .dps-overlay {
+        top: 0;
+      }
+    }
+  } // li
+
+  .dps-data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 25%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.85) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.55)), color-stop(100%,rgba(0,0,0,0.85))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 25%,rgba(0,0,0,0.55) 50%,rgba(0,0,0,0.85) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 25%,rgba(0,0,0,0.55) 50%,rgba(0,0,0,0.85) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 25%,rgba(0,0,0,0.55) 50%,rgba(0,0,0,0.85) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 25%,rgba(0,0,0,0.55) 50%,rgba(0,0,0,0.85) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#d9000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  .dps-number {
+    width: 75%;
+    padding: 125px 0 8px 28px;
+    font-weight: bold;
+    font-size: 90px;
+    color: #fff;
+    color: rgba(255,255,255,.8);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    line-height: 1;
+    opacity: 0;
+    transition: all 750ms ease-in-out;
+
+    @media (max-width: $screen-xs-max) {
+      padding-top: 70px;
+    }
+
+    .hash, .percent {
+      position: relative;
+      top: -21px;
+      font-size: 60px;
+    }
+
+    .plus {
+      position: relative;
+      top: -18px;
+    }
+  }
+
+  .dps-line {
+    height: 3px;
+    width: 75%;
+    margin-left: -75%;
+    background: $brand-primary;
+    transition: all 750ms ease-in-out;
+
+    @media (max-width: $screen-xs-max) {
+      width: 85%;
+      margin-left: -85%;
+    }
+  }
+
+  .dps-text {
+    width: 75%;
+    padding: 26px 20px 0 30px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 750ms ease-in-out;
+
+    @media (max-width: $screen-xs-max) {
+      width: 85%;
+      font-size: 18px;
+    }
+  }
+
+  .dps-overlay {
+    display: table;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    background-color: $brand-primary;
+    background-color: rgba(242,101,34,.9);
+    transition: top 350ms ease-in-out;
+  }
+
+  .dps-overlay-content {
+    display: table-cell;
+    vertical-align: middle;  
+
+    .btn-primary:hover {
+      background: lighten($brand-primary, 35%);
+    }
+  }
+
+  .dps-overlay-headline {
+    padding: 37px 0 31px;
+    font-weight: 200;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.3;
+    border-top: 3px solid #fff;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 20px;
+    }
+  }
+
+} // data-point-slider
