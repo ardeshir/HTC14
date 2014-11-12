@@ -7126,3 +7126,7 @@ table.gsc-search-box td.gsc-input {
     border-right: 0px solid #aaa;
 } 
 
+.header-search-form.active {
+display: inline-block;
+width: 200px;
+}
