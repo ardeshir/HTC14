@@ -5239,7 +5239,7 @@ button.close {
  }
 
 /* ---------------------------------------------------------
-	LAYOUT: UNIVERSAL
+  LAYOUT: UNIVERSAL
 --------------------------------------------------------- */
 body, html {
   width: 100%;
@@ -5272,7 +5272,7 @@ body {
   pointer-events: none; }
 
 /* ---------------------------------------------------------
-	MY HTC NAVIGATION
+  MY HTC NAVIGATION
 --------------------------------------------------------- */
 .my-htc-navigation {
   position: absolute;
@@ -5290,7 +5290,7 @@ body {
     margin-left: -10px; }
 
 /* ---------------------------------------------------------
-	HEADER
+  HEADER
 --------------------------------------------------------- */
 .header {
   position: absolute;
@@ -5616,7 +5616,7 @@ body {
     background-color: #d44d0d; }
 
 /* ---------------------------------------------------------
-	FOOTER
+  FOOTER
 --------------------------------------------------------- */
 footer {
   position: relative;
@@ -5787,7 +5787,7 @@ footer {
     color: #464646; }
 
 /* ---------------------------------------------------------
-	LAYOUT: HOME PAGE
+  LAYOUT: HOME PAGE
 --------------------------------------------------------- */
 .htc-alert {
   position: absolute;
@@ -6039,7 +6039,7 @@ footer {
         margin-bottom: 22px; } }
 
 /* ---------------------------------------------------------
-	LAYOUT: INSIDE PAGE
+  LAYOUT: INSIDE PAGE
 --------------------------------------------------------- */
 .main-content {
   position: relative;
@@ -6086,7 +6086,7 @@ footer {
       font-size: 16px;
       line-height: 1.33; }
     .main-content ul.list li:before {
-      content: "•";
+      content: "â¢";
       position: absolute;
       top: 0;
       left: -17px;
@@ -6244,7 +6244,7 @@ footer {
   color: #aaa; }
 
 /* ---------------------------------------------------------
-	MODULE: ACCORDION
+  MODULE: ACCORDION
 --------------------------------------------------------- */
 .accordion {
   margin: 53px 0 57px;
@@ -6305,7 +6305,7 @@ footer {
     margin: 30px 0 9px; }
 
 /* ---------------------------------------------------------
-	MODULE: ALPHABETICAL LIST
+  MODULE: ALPHABETICAL LIST
 --------------------------------------------------------- */
 .alphbetical-list {
   position: relative;
@@ -6463,7 +6463,7 @@ footer {
   line-height: 1 !important; }
 
 /* ---------------------------------------------------------
-	MODULE: CALENDAR LIST
+  MODULE: CALENDAR LIST
 --------------------------------------------------------- */
 .calendar-list-module {
   position: relative;
@@ -6583,7 +6583,7 @@ footer {
     padding: 0 4px; }
 
 /* ---------------------------------------------------------
-	MODULE: EXCERPT BLOCKS
+  MODULE: EXCERPT BLOCKS
 --------------------------------------------------------- */
 .excerpt-blocks {
   margin-top: 53px;
@@ -6609,7 +6609,7 @@ footer {
     line-height: 1.1; }
 
 /* ---------------------------------------------------------
-	MODULE: CONTENT FOOTER
+  MODULE: CONTENT FOOTER
 --------------------------------------------------------- */
 .content-footer {
   margin-top: 53px;
@@ -6634,7 +6634,7 @@ footer {
       margin-bottom: 12px; } }
 
 /* ---------------------------------------------------------
-	MODULE: DATA POINT SLIDER
+  MODULE: DATA POINT SLIDER
 --------------------------------------------------------- */
 .data-point-slider-wrap {
   position: relative;
@@ -6783,7 +6783,7 @@ footer {
         font-size: 20px; } }
 
 /* ---------------------------------------------------------
-	MODULE: INSDIE IMAGE BANNER
+  MODULE: INSDIE IMAGE BANNER
 --------------------------------------------------------- */
 .inside-image-banner {
   width: 100%;
@@ -6799,7 +6799,7 @@ footer {
       height: 160px; } }
 
 /* ---------------------------------------------------------
-	MODULE: PROGRAM OVERVIEW
+  MODULE: PROGRAM OVERVIEW
 --------------------------------------------------------- */
 .program-overview {
   height: 422px;
@@ -6856,7 +6856,7 @@ footer {
       text-transform: uppercase; }
 
 /* ---------------------------------------------------------
-	MODULE: COURSE OVERVIEW
+  MODULE: COURSE OVERVIEW
 --------------------------------------------------------- */
 .course-overview {
   margin: 28px 0 8px; }
@@ -6917,7 +6917,7 @@ footer {
       white-space: nowrap; }
 
 /* ---------------------------------------------------------
-	MODULE: CREDIT LISTS
+  MODULE: CREDIT LISTS
 --------------------------------------------------------- */
 .credit-lists {
   margin: 40px 0 15px; }
@@ -6928,7 +6928,7 @@ footer {
     margin-bottom: -10px; }
 
 /* ---------------------------------------------------------
-	MODULE: PROGRAM SLIDER
+  MODULE: PROGRAM SLIDER
 --------------------------------------------------------- */
 .program-slider-wrap {
   position: relative;
@@ -7065,3 +7065,64 @@ footer {
   margin-bottom: 33px;
   font-size: 16px;
   line-height: 1.5; }
+
+/* -------------------------------------------------
+
+update the master.css for google box  2014-11-12 
+
+---------------------------------------------------- */
+.gsc-input {
+font-family: "Din", Arial;
+font-size: 16px;
+color: black;
+display: inline-block;
+width: 150px;
+height: 20px !important;
+padding: 3px 35px 0px 7px;
+line-height: 25px;
+}
+input.gsc-search-button {
+font-family: "Din", Arial;
+font-size: 10px;
+color: black;
+}
+table.gsc-branding  {
+display: none;
+}
+td.gsc-clear-button {
+   width: 15px;
+}
+
+
+table.gsc-search-box td.gsc-input {
+    padding-right: 0px;
+}
+
+
+.header-search-form:after {
+  top: -2px !important;
+}
+
+.primary-navigation .dropdown-menu .primary-nav-search {
+    background-color: #f26522;
+    margin-bottom: 6px;
+    padding: 0 26px;
+    position: relative;
+}
+
+.gsc-search-box {
+  margin-bottom: 0 !important;
+}
+
+.header-search:before {
+    border-right: 0px solid #aaa;
+}
+
+.header-search:after {
+    border-right: 0px solid #aaa;
+} 
+
+.header-search-form:after {
+    border-right: 0px solid #aaa;
+} 
+
